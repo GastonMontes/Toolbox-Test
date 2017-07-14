@@ -1,0 +1,5 @@
+target 'Toolbox-Test' do
+  use_frameworks!
+
+  pod 'SwiftyJSON'
+end
