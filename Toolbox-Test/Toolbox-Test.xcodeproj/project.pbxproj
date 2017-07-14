@@ -16,6 +16,8 @@
 		38BA60501F17C30C00854AA1 /* Toolbox-Test-Data in Resources */ = {isa = PBXBuildFile; fileRef = 38BA604F1F17C30C00854AA1 /* Toolbox-Test-Data */; };
 		38BA60511F17C30C00854AA1 /* Toolbox-Test-Data in Resources */ = {isa = PBXBuildFile; fileRef = 38BA604F1F17C30C00854AA1 /* Toolbox-Test-Data */; };
 		38BA60541F1927E500854AA1 /* GMStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BA60531F1927E500854AA1 /* GMStackViewController.swift */; };
+		38CB96C31F19323F00DF2AEA /* GMCarouselDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB96C21F19323F00DF2AEA /* GMCarouselDatasource.swift */; };
+		38CB96C41F19323F00DF2AEA /* GMCarouselDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB96C21F19323F00DF2AEA /* GMCarouselDatasource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,7 @@
 		38BA603F1F17B8BD00854AA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38BA604F1F17C30C00854AA1 /* Toolbox-Test-Data */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Toolbox-Test-Data"; sourceTree = "<group>"; };
 		38BA60531F1927E500854AA1 /* GMStackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMStackViewController.swift; sourceTree = "<group>"; };
+		38CB96C21F19323F00DF2AEA /* GMCarouselDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMCarouselDatasource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,7 @@
 		38BA601C1F17B8BD00854AA1 /* Toolbox-Test */ = {
 			isa = PBXGroup;
 			children = (
+				38BA60571F19308000854AA1 /* Model */,
 				38BA60521F19278F00854AA1 /* ViewController */,
 				38BA604E1F17C30C00854AA1 /* Data */,
 				38BA601D1F17B8BD00854AA1 /* AppDelegate.swift */,
@@ -143,6 +147,22 @@
 				38BA60531F1927E500854AA1 /* GMStackViewController.swift */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		38BA60571F19308000854AA1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				38CB96BE1F1931C600DF2AEA /* Datasource */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		38CB96BE1F1931C600DF2AEA /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				38CB96C21F19323F00DF2AEA /* GMCarouselDatasource.swift */,
+			);
+			name = Datasource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +306,7 @@
 			files = (
 				38BA60541F1927E500854AA1 /* GMStackViewController.swift in Sources */,
 				38BA601E1F17B8BD00854AA1 /* AppDelegate.swift in Sources */,
+				38CB96C31F19323F00DF2AEA /* GMCarouselDatasource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38CB96C41F19323F00DF2AEA /* GMCarouselDatasource.swift in Sources */,
 				38BA60331F17B8BD00854AA1 /* Toolbox_TestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -540,6 +562,7 @@
 				38BA60441F17B8BD00854AA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		38BA60451F17B8BD00854AA1 /* Build configuration list for PBXNativeTarget "Toolbox-TestTests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +571,7 @@
 				38BA60471F17B8BD00854AA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		38BA60481F17B8BD00854AA1 /* Build configuration list for PBXNativeTarget "Toolbox-TestUITests" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +580,7 @@
 				38BA604A1F17B8BD00854AA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
