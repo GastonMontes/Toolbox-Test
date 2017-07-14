@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3850BD7F1F1974D200EDA6CB /* Bundle+File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850BD7E1F1974D200EDA6CB /* Bundle+File.swift */; };
 		38BA601E1F17B8BD00854AA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BA601D1F17B8BD00854AA1 /* AppDelegate.swift */; };
 		38BA60231F17B8BD00854AA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38BA60211F17B8BD00854AA1 /* Main.storyboard */; };
 		38BA60251F17B8BD00854AA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BA60241F17B8BD00854AA1 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		1C242812D11A01FA2C571916 /* Pods_Toolbox_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Toolbox_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3252E453FE8DFEDA976C33 /* Pods-Toolbox-Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toolbox-Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Toolbox-Test/Pods-Toolbox-Test.release.xcconfig"; sourceTree = "<group>"; };
+		3850BD7E1F1974D200EDA6CB /* Bundle+File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+File.swift"; sourceTree = "<group>"; };
 		38BA601A1F17B8BD00854AA1 /* Toolbox-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Toolbox-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38BA601D1F17B8BD00854AA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38BA60221F17B8BD00854AA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,6 +87,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3850BD7C1F195A8F00EDA6CB /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Carousel;
+			sourceTree = "<group>";
+		};
+		3850BD7D1F19740F00EDA6CB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3850BD7E1F1974D200EDA6CB /* Bundle+File.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		38BA60111F17B8BD00854AA1 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +127,7 @@
 		38BA601C1F17B8BD00854AA1 /* Toolbox-Test */ = {
 			isa = PBXGroup;
 			children = (
+				3850BD7D1F19740F00EDA6CB /* Utils */,
 				38BA60571F19308000854AA1 /* Model */,
 				38BA60521F19278F00854AA1 /* ViewController */,
 				38BA604E1F17C30C00854AA1 /* Data */,
@@ -159,6 +177,7 @@
 		38BA60571F19308000854AA1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3850BD7C1F195A8F00EDA6CB /* Carousel */,
 				38CB96BE1F1931C600DF2AEA /* Datasource */,
 			);
 			name = Model;
@@ -380,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38BA60541F1927E500854AA1 /* GMStackViewController.swift in Sources */,
+				3850BD7F1F1974D200EDA6CB /* Bundle+File.swift in Sources */,
 				38BA601E1F17B8BD00854AA1 /* AppDelegate.swift in Sources */,
 				38CB96C31F19323F00DF2AEA /* GMCarouselDatasource.swift in Sources */,
 			);
