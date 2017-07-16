@@ -17,7 +17,7 @@ public typealias BundleReadSuccessClosure = (_ dataRead: Data) -> Void
 public typealias BundleReadFailClosure = (_ errorRead: BundleReadError) -> Void
 
 extension Bundle {
-    class func bundleReadJSONFile(filePath: String!, successRead: BundleReadSuccessClosure!, failRead: BundleReadFailClosure!) {
+    class func bundleReadFile(filePath: String!, successRead: BundleReadSuccessClosure!, failRead: BundleReadFailClosure!) {
         let filePathComponents : Array! = filePath.components(separatedBy: ".")
         let fileName : String! = filePathComponents[0]
         let fileExtension : String! = filePathComponents[1]

@@ -17,7 +17,7 @@ class GMCarouselDatasource: NSObject {
     override init() {
         super.init()
         
-        Bundle.bundleReadJSONFile(filePath: kCarouselDataFilePath,
+        Bundle.bundleReadFile(filePath: kCarouselDataFilePath,
                                   successRead: { (_ dataRead: Data) -> Void in },
                                   failRead: { (_ errorRead: BundleReadError) -> Void in })
     }
