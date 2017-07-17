@@ -22,7 +22,7 @@ private let kCarouselModelItemKey = "items"
 class GMCarouselModel {
     // MARK: - Vars.
     private(set) var carouselModelTitle: String!
-    private var carouselModelType: GMCarouselModelType!
+    private(set) var carouselModelType: GMCarouselModelType!
     private(set) var carouselModelItems = Array<GMCarouselModelItem>()
     
     // MARK: - Initialization.

@@ -13,7 +13,7 @@ private let kCarouselDataFilePath = "Toolbox-Test-Data.json"
 
 class GMCarouselDatasource {
     // MARK: - Vars.
-    private(set) var carouselDatasourceModels = Array<GMCarouselModel>()
+    private var carouselDatasourceModels = Array<GMCarouselModel>()
     
     // MARK: - Initialization.
     init() {
@@ -45,5 +45,14 @@ class GMCarouselDatasource {
         for carouselDataJSON in dataJSON {
             self.carouselDatasourceModels.append(GMCarouselModel(carouselJSONData: carouselDataJSON))
         }
+    }
+    
+    // MARK: - Carousel datasrouce functions.
+    func carouselDatasourceCount() -> Int {
+        return self.carouselDatasourceModels.count
+    }
+    
+    func carouselDatasourceTitleForSection(section: Int) -> String {
+        return self.carouselDatasourceModels[section].carouselModelTitle
     }
 }
