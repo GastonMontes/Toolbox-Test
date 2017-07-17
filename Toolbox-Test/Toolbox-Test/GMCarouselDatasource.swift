@@ -9,10 +9,10 @@
 import UIKit
 import SwiftyJSON
 
+// MARK: - Constants.
+private let kCarouselDataFilePath = "Toolbox-Test-Data.json"
+
 class GMCarouselDatasource {
-    // MARK: - Constants.
-    private let kCarouselDataFilePath = "Toolbox-Test-Data.json"
-    
     // MARK: - Vars.
     private(set) var carouselDatasourceModels = Array<GMCarouselModel>()
     
@@ -45,7 +45,6 @@ class GMCarouselDatasource {
     private func createCarouselModels(dataJSON: Array<JSON>) {
         for carouselDataJSON in dataJSON {
             self.carouselDatasourceModels.append(GMCarouselModel(carouselJSONData: carouselDataJSON))
-            print(carouselDataJSON)
         }
     }
 }
