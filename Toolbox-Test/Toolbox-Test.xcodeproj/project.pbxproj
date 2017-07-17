@@ -217,10 +217,26 @@
 		38F1095F1F1D5C80006B6DFE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				38F109681F1D6351006B6DFE /* CollectionView */,
+				38F109671F1D633D006B6DFE /* TableView */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		38F109671F1D633D006B6DFE /* TableView */ = {
+			isa = PBXGroup;
+			children = (
 				38F109601F1D5CB0006B6DFE /* GMCarouselTableViewCell.swift */,
 				38F109611F1D5CB0006B6DFE /* GMCarouselTableViewCell.xib */,
 			);
-			name = View;
+			name = TableView;
+			sourceTree = "<group>";
+		};
+		38F109681F1D6351006B6DFE /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CollectionView;
 			sourceTree = "<group>";
 		};
 		3FCF6EC9BF327AFBD5AF639A /* Pods */ = {

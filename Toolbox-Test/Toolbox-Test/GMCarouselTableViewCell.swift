@@ -8,17 +8,28 @@
 
 import UIKit
 
-class GMCarouselTableViewCell: UITableViewCell {
+private let kCarouselCellHeightLarge = CGFloat(640)
+private let kCarouselCellHeightSmall = CGFloat(320)
 
+class GMCarouselTableViewCell: UITableViewCell {
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
+    // MARK: - Styling functions.
+    class func carouselCellHeightSmall() -> CGFloat {
+        return kCarouselCellHeightSmall
+    }
+    
+    class func carouselCellHeightLarge() -> CGFloat {
+        return kCarouselCellHeightLarge
+    }
 }

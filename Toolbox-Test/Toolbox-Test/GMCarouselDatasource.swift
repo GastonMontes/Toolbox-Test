@@ -52,7 +52,11 @@ class GMCarouselDatasource {
         return self.carouselDatasourceModels.count
     }
     
-    func carouselDatasourceTitleForSection(section: Int) -> String {
+    func carouselDatasourceTitle(forSection section: Int) -> String {
         return self.carouselDatasourceModels[section].carouselModelTitle
+    }
+    
+    func carouselDatasrouceType(forSection section: Int) -> GMCarouselModelType! {
+        return self.carouselDatasourceModels[section].carouselModelType
     }
 }

@@ -11,7 +11,7 @@ import UIKit
 
 private let kStatusBarHeight = CGFloat(20)
 
-extension GMStackViewController: UITableViewDataSource {
+extension GMStackViewController: UITableViewDataSource, UITableViewDelegate {
 
     // MARK: - Table configuration functions.
     func setUpTableView() -> Void {
@@ -24,7 +24,7 @@ extension GMStackViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return self.carouselDataSource.carouselDatasourceTitleForSection(section: section)
+        return self.carouselDataSource.carouselDatasourceTitle(forSection: section)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,5 +35,16 @@ extension GMStackViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: GMCarouselTableViewCell.self)) as! GMCarouselTableViewCell
         return cell
+    }
+    
+    // MARK: - UITableViewDelegate implementation.
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let carouselType = self.carouselDataSource.carouselDatasrouceType(forSection: indexPath.section)
+        
+        if carouselType == GMCarouselModelType.typePoster {
+            return GMCarouselTableViewCell.carouselCellHeightSmall()
+        }
+        
+        return GMCarouselTableViewCell.carouselCellHeightLarge()
     }
 }
