@@ -21,6 +21,8 @@
 		38CB96C71F19351700DF2AEA /* Toolbox-Test-Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 38CB96C51F19351700DF2AEA /* Toolbox-Test-Data.json */; };
 		38F109541F1BBD0F006B6DFE /* Data+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F109531F1BBD0F006B6DFE /* Data+JSON.swift */; };
 		38F109551F1BBD0F006B6DFE /* Data+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F109531F1BBD0F006B6DFE /* Data+JSON.swift */; };
+		38F109571F1CE126006B6DFE /* GMCarouselModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F109561F1CE126006B6DFE /* GMCarouselModel.swift */; };
+		38F109581F1CE126006B6DFE /* GMCarouselModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F109561F1CE126006B6DFE /* GMCarouselModel.swift */; };
 		7272F1580FD2E903F71C075B /* Pods_Toolbox_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C242812D11A01FA2C571916 /* Pods_Toolbox_Test.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,7 @@
 		38CB96C21F19323F00DF2AEA /* GMCarouselDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMCarouselDatasource.swift; sourceTree = "<group>"; };
 		38CB96C51F19351700DF2AEA /* Toolbox-Test-Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Toolbox-Test-Data.json"; sourceTree = "<group>"; };
 		38F109531F1BBD0F006B6DFE /* Data+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+JSON.swift"; sourceTree = "<group>"; };
+		38F109561F1CE126006B6DFE /* GMCarouselModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMCarouselModel.swift; sourceTree = "<group>"; };
 		D9C49D1F77B9F13817EAED60 /* Pods-Toolbox-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toolbox-Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Toolbox-Test/Pods-Toolbox-Test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +96,7 @@
 		3850BD7C1F195A8F00EDA6CB /* Carousel */ = {
 			isa = PBXGroup;
 			children = (
+				38F109561F1CE126006B6DFE /* GMCarouselModel.swift */,
 			);
 			name = Carousel;
 			sourceTree = "<group>";
@@ -407,6 +411,7 @@
 				3850BD7F1F1974D200EDA6CB /* Bundle+File.swift in Sources */,
 				38BA601E1F17B8BD00854AA1 /* AppDelegate.swift in Sources */,
 				38CB96C31F19323F00DF2AEA /* GMCarouselDatasource.swift in Sources */,
+				38F109571F1CE126006B6DFE /* GMCarouselModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +422,7 @@
 				38CB96C41F19323F00DF2AEA /* GMCarouselDatasource.swift in Sources */,
 				38F109551F1BBD0F006B6DFE /* Data+JSON.swift in Sources */,
 				38BA60331F17B8BD00854AA1 /* Toolbox_TestTests.swift in Sources */,
+				38F109581F1CE126006B6DFE /* GMCarouselModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
