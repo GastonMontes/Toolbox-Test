@@ -47,6 +47,12 @@
                             <constraint firstAttribute="trailing" secondItem="aAX-8H-0M2" secondAttribute="trailing" id="xot-1F-bSK"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="carouselTableView" destination="aAX-8H-0M2" id="kb6-SV-z0r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

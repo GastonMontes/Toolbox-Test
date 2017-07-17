@@ -9,8 +9,15 @@
 import Foundation
 import UIKit
 
+private let kStatusBarHeight = CGFloat(20)
+
 extension GMStackViewController: UITableViewDataSource {
 
+    // MARK: - Table configuration functions.
+    func setUpTableView() -> Void {
+        self.carouselTableView?.contentInset = UIEdgeInsets(top: kStatusBarHeight, left: 0, bottom: 0, right: 0)
+    }
+    
     // MARK: - UITableViewDataSource implementation.
     func numberOfSections(in tableView: UITableView) -> Int {
         return self.carouselDataSource.carouselDatasourceCount()
