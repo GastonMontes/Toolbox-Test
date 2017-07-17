@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SwiftyJSON
 
 // MARK: - Constants.
 private let kModelItemTitleKey = "title"
@@ -21,9 +20,9 @@ class GMCarouselModelItem {
     private(set) var modelItemVideoURL: String?
     
     // MARK: - Initialization.
-    init(modelItemJSONData: JSON!) {
-        self.modelItemTitle = modelItemJSONData[kModelItemTitleKey].stringValue
-        self.modelItemImageURL = modelItemJSONData[kModelItemImageKey].stringValue
-        self.modelItemVideoURL = modelItemJSONData[kModelItemVideoKey].stringValue;
+    init(modelItemJSONData: Dictionary<String, String>!) {
+        self.modelItemTitle = modelItemJSONData[kModelItemTitleKey]!
+        self.modelItemImageURL = modelItemJSONData[kModelItemImageKey]!
+        self.modelItemVideoURL = modelItemJSONData[kModelItemVideoKey]!
     }
 }

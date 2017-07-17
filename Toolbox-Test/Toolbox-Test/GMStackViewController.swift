@@ -9,10 +9,11 @@
 import UIKit
 
 class GMStackViewController: UIViewController {
+    
+    // MARk: - Vars.
+    private let carouselDataSource = GMCarouselDatasource()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let carouselDataSource = GMCarouselDatasource()
     }
 }

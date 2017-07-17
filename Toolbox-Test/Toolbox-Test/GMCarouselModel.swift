@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyJSON
 
 public enum GMCarouselModelType {
     case typeThumb
@@ -27,10 +26,10 @@ class GMCarouselModel {
     private(set) var carouselModelItems = Array<GMCarouselModelItem>()
     
     // MARK: - Initialization.
-    init(carouselJSONData: JSON) {
-        self.carouselModelTitle = carouselJSONData[kCarouselModelTitleKey].stringValue
-        self.carouselModelType = self.carouselModelType(stringType: carouselJSONData[kCarouselModelTypeKey].stringValue)
-        self.addCarouselModelItems(items: carouselJSONData[kCarouselModelItemKey].arrayValue)
+    init(carouselJSONData: Dictionary<String, Any>) {
+        self.carouselModelTitle = carouselJSONData[kCarouselModelTitleKey]! as! String
+        self.carouselModelType = self.carouselModelType(stringType: carouselJSONData[kCarouselModelTypeKey]! as! String)
+        self.addCarouselModelItems(items: carouselJSONData[kCarouselModelItemKey]! as! Array<Dictionary<String, String>>)
     }
     
     // MARK: - Data functions.
@@ -42,7 +41,7 @@ class GMCarouselModel {
         return GMCarouselModelType.typeThumb
     }
     
-    private func addCarouselModelItems(items: Array<JSON>) -> Void {
+    private func addCarouselModelItems(items: Array<Dictionary<String, String>>) -> Void {
         for itemData in items {
             self.carouselModelItems.append(GMCarouselModelItem(modelItemJSONData: itemData))
         }
