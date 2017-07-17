@@ -27,6 +27,10 @@
 		38F1095B1F1D0956006B6DFE /* GMCarouselModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F109591F1D0956006B6DFE /* GMCarouselModelItem.swift */; };
 		38F1095D1F1D569C006B6DFE /* GMStackViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1095C1F1D569C006B6DFE /* GMStackViewController+TableView.swift */; };
 		38F1095E1F1D569C006B6DFE /* GMStackViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1095C1F1D569C006B6DFE /* GMStackViewController+TableView.swift */; };
+		38F109621F1D5CB0006B6DFE /* GMCarouselTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F109601F1D5CB0006B6DFE /* GMCarouselTableViewCell.swift */; };
+		38F109631F1D5CB0006B6DFE /* GMCarouselTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F109601F1D5CB0006B6DFE /* GMCarouselTableViewCell.swift */; };
+		38F109641F1D5CB0006B6DFE /* GMCarouselTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38F109611F1D5CB0006B6DFE /* GMCarouselTableViewCell.xib */; };
+		38F109651F1D5CB0006B6DFE /* GMCarouselTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38F109611F1D5CB0006B6DFE /* GMCarouselTableViewCell.xib */; };
 		7272F1580FD2E903F71C075B /* Pods_Toolbox_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C242812D11A01FA2C571916 /* Pods_Toolbox_Test.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +74,8 @@
 		38F109561F1CE126006B6DFE /* GMCarouselModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMCarouselModel.swift; sourceTree = "<group>"; };
 		38F109591F1D0956006B6DFE /* GMCarouselModelItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMCarouselModelItem.swift; sourceTree = "<group>"; };
 		38F1095C1F1D569C006B6DFE /* GMStackViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GMStackViewController+TableView.swift"; sourceTree = "<group>"; };
+		38F109601F1D5CB0006B6DFE /* GMCarouselTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMCarouselTableViewCell.swift; sourceTree = "<group>"; };
+		38F109611F1D5CB0006B6DFE /* GMCarouselTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GMCarouselTableViewCell.xib; sourceTree = "<group>"; };
 		D9C49D1F77B9F13817EAED60 /* Pods-Toolbox-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toolbox-Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Toolbox-Test/Pods-Toolbox-Test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +148,7 @@
 		38BA601C1F17B8BD00854AA1 /* Toolbox-Test */ = {
 			isa = PBXGroup;
 			children = (
+				38F1095F1F1D5C80006B6DFE /* View */,
 				3850BD7D1F19740F00EDA6CB /* Utils */,
 				38BA60571F19308000854AA1 /* Model */,
 				38BA60521F19278F00854AA1 /* ViewController */,
@@ -205,6 +212,15 @@
 				38CB96C21F19323F00DF2AEA /* GMCarouselDatasource.swift */,
 			);
 			name = Datasource;
+			sourceTree = "<group>";
+		};
+		38F1095F1F1D5C80006B6DFE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				38F109601F1D5CB0006B6DFE /* GMCarouselTableViewCell.swift */,
+				38F109611F1D5CB0006B6DFE /* GMCarouselTableViewCell.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		3FCF6EC9BF327AFBD5AF639A /* Pods */ = {
@@ -341,6 +357,7 @@
 				38BA60281F17B8BD00854AA1 /* LaunchScreen.storyboard in Resources */,
 				38BA60251F17B8BD00854AA1 /* Assets.xcassets in Resources */,
 				38BA60231F17B8BD00854AA1 /* Main.storyboard in Resources */,
+				38F109641F1D5CB0006B6DFE /* GMCarouselTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38CB96C71F19351700DF2AEA /* Toolbox-Test-Data.json in Resources */,
+				38F109651F1D5CB0006B6DFE /* GMCarouselTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +434,7 @@
 			files = (
 				38BA60541F1927E500854AA1 /* GMStackViewController.swift in Sources */,
 				38F1095A1F1D0956006B6DFE /* GMCarouselModelItem.swift in Sources */,
+				38F109621F1D5CB0006B6DFE /* GMCarouselTableViewCell.swift in Sources */,
 				38F109541F1BBD0F006B6DFE /* Data+JSON.swift in Sources */,
 				3850BD7F1F1974D200EDA6CB /* Bundle+File.swift in Sources */,
 				38BA601E1F17B8BD00854AA1 /* AppDelegate.swift in Sources */,
@@ -433,6 +452,7 @@
 				38F109551F1BBD0F006B6DFE /* Data+JSON.swift in Sources */,
 				38F1095B1F1D0956006B6DFE /* GMCarouselModelItem.swift in Sources */,
 				38F1095E1F1D569C006B6DFE /* GMStackViewController+TableView.swift in Sources */,
+				38F109631F1D5CB0006B6DFE /* GMCarouselTableViewCell.swift in Sources */,
 				38BA60331F17B8BD00854AA1 /* Toolbox_TestTests.swift in Sources */,
 				38F109581F1CE126006B6DFE /* GMCarouselModel.swift in Sources */,
 			);

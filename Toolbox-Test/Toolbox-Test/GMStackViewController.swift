@@ -11,7 +11,7 @@ import UIKit
 class GMStackViewController: UIViewController {
     
     // MARk: - Vars.
-    private(set) let carouselDataSource = GMCarouselDatasource()
+    let carouselDataSource = GMCarouselDatasource()
 
     override func viewDidLoad() {
         super.viewDidLoad()

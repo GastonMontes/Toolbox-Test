@@ -12,7 +12,7 @@ import UIKit
 extension GMStackViewController: UITableViewDataSource {
 
     // MARK: - UITableViewDataSource implementation.
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return self.carouselDataSource.carouselDatasourceCount()
     }
     
@@ -26,7 +26,7 @@ extension GMStackViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(String(descriptor: GMCarouselTableViewCell.self))
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: GMCarouselTableViewCell.self)) as! GMCarouselTableViewCell
         return cell
     }
 }
