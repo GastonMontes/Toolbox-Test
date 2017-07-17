@@ -29,8 +29,8 @@ class GMCarouselTableViewCell: UITableViewCell {
     
     // MARK: - Styling functions.
     private func carouselCellSetupTitle() -> Void {
-        self.carouselCellTitle?.textColor = UIColor(red: 0.9255, green: 0.2980, blue: 0.1647, alpha: 1.0)
-        self.carouselCellTitle?.font = UIFont.boldSystemFont(ofSize: 20)
+        self.carouselCellTitle?.textColor = UIColor.carouselTitleTextColor()
+        self.carouselCellTitle?.font = UIFont.carouselTitleFont()
     }
     
     private func carouselCellSetupCollectionView() -> Void {
