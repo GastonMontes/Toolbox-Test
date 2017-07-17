@@ -20,9 +20,10 @@ class GMCarouselDatasource: NSObject {
         self.readfile()
     }
     
-    func readfile() -> Void {
+    // MARK: - Data functions.
+    private func readfile() -> Void {
         Bundle.bundleReadFile(filePath: kCarouselDataFilePath,
-                              successRead: { (_ dataRead: Data) -> Void in
+                              successRead: { [unowned self] dataRead in
                                 self.getJSONData(data: dataRead)
         },
                               failRead: { (_ errorRead: BundleReadError) -> Void in
@@ -30,12 +31,19 @@ class GMCarouselDatasource: NSObject {
         })
     }
     
-    func getJSONData(data: Data) -> Void {
-        data.dataGetJSON(successJSON: { (_ dataJSON: JSON) -> Void in
-            print(dataJSON)
+    private func getJSONData(data: Data) -> Void {
+        data.dataGetJSON(successJSON: { [unowned self] dataJSON in
+            self.createCarouselModels(dataJSON: dataJSON)
         },
                          failJSON: { (_ dataJSONError: DataJSONError) -> Void in
                             print(dataJSONError)
         })
+    }
+    
+    // MARK: - Models functions.
+    private func createCarouselModels(dataJSON: Array<JSON>) {
+        for carouselDataJSON in dataJSON {
+            print(carouselDataJSON)
+        }
     }
 }

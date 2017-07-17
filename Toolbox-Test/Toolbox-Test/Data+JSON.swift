@@ -13,7 +13,7 @@ public enum DataJSONError : Error {
     case invaidJSON
 }
 
-public typealias DataJSONSuccessClosure = (_ dataJSON: JSON) -> Void
+public typealias DataJSONSuccessClosure = (_ dataJSON: Array<JSON>) -> Void
 public typealias DataJSONFailClosure = (_ dataJSONError: DataJSONError) -> Void
 
 extension Data {
@@ -21,7 +21,7 @@ extension Data {
         let jsonObj = JSON(data: self)
         
         if jsonObj != JSON.null {
-            successJSON(jsonObj)
+            successJSON(jsonObj.arrayValue)
         } else {
             failJSON(DataJSONError.invaidJSON)
         }
