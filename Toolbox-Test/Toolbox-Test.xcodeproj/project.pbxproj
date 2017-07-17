@@ -31,6 +31,8 @@
 		38F109631F1D5CB0006B6DFE /* GMCarouselTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F109601F1D5CB0006B6DFE /* GMCarouselTableViewCell.swift */; };
 		38F109641F1D5CB0006B6DFE /* GMCarouselTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38F109611F1D5CB0006B6DFE /* GMCarouselTableViewCell.xib */; };
 		38F109651F1D5CB0006B6DFE /* GMCarouselTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38F109611F1D5CB0006B6DFE /* GMCarouselTableViewCell.xib */; };
+		38F1096E1F1D71EC006B6DFE /* GMCarouselTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1096D1F1D71EC006B6DFE /* GMCarouselTableViewCellModel.swift */; };
+		38F1096F1F1D71EC006B6DFE /* GMCarouselTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1096D1F1D71EC006B6DFE /* GMCarouselTableViewCellModel.swift */; };
 		7272F1580FD2E903F71C075B /* Pods_Toolbox_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C242812D11A01FA2C571916 /* Pods_Toolbox_Test.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,7 @@
 		38F1095C1F1D569C006B6DFE /* GMStackViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GMStackViewController+TableView.swift"; sourceTree = "<group>"; };
 		38F109601F1D5CB0006B6DFE /* GMCarouselTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMCarouselTableViewCell.swift; sourceTree = "<group>"; };
 		38F109611F1D5CB0006B6DFE /* GMCarouselTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GMCarouselTableViewCell.xib; sourceTree = "<group>"; };
+		38F1096D1F1D71EC006B6DFE /* GMCarouselTableViewCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMCarouselTableViewCellModel.swift; sourceTree = "<group>"; };
 		D9C49D1F77B9F13817EAED60 /* Pods-Toolbox-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toolbox-Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Toolbox-Test/Pods-Toolbox-Test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -228,6 +231,7 @@
 			children = (
 				38F109601F1D5CB0006B6DFE /* GMCarouselTableViewCell.swift */,
 				38F109611F1D5CB0006B6DFE /* GMCarouselTableViewCell.xib */,
+				38F1096D1F1D71EC006B6DFE /* GMCarouselTableViewCellModel.swift */,
 			);
 			name = TableView;
 			sourceTree = "<group>";
@@ -455,6 +459,7 @@
 				3850BD7F1F1974D200EDA6CB /* Bundle+File.swift in Sources */,
 				38BA601E1F17B8BD00854AA1 /* AppDelegate.swift in Sources */,
 				38CB96C31F19323F00DF2AEA /* GMCarouselDatasource.swift in Sources */,
+				38F1096E1F1D71EC006B6DFE /* GMCarouselTableViewCellModel.swift in Sources */,
 				38F109571F1CE126006B6DFE /* GMCarouselModel.swift in Sources */,
 				38F1095D1F1D569C006B6DFE /* GMStackViewController+TableView.swift in Sources */,
 			);
@@ -471,6 +476,7 @@
 				38F109631F1D5CB0006B6DFE /* GMCarouselTableViewCell.swift in Sources */,
 				38BA60331F17B8BD00854AA1 /* Toolbox_TestTests.swift in Sources */,
 				38F109581F1CE126006B6DFE /* GMCarouselModel.swift in Sources */,
+				38F1096F1F1D71EC006B6DFE /* GMCarouselTableViewCellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,15 +16,14 @@ extension GMStackViewController: UITableViewDataSource, UITableViewDelegate {
     // MARK: - Table configuration functions.
     func setUpTableView() -> Void {
         self.carouselTableView?.contentInset = UIEdgeInsets(top: kStatusBarHeight, left: 0, bottom: 0, right: 0)
+        
+        let cellName =  String(describing: GMCarouselTableViewCell.self)
+        self.carouselTableView?.register(UINib(nibName:  cellName, bundle: nil), forCellReuseIdentifier:  cellName)
     }
     
     // MARK: - UITableViewDataSource implementation.
     func numberOfSections(in tableView: UITableView) -> Int {
         return self.carouselDataSource.carouselDatasourceCount()
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return self.carouselDataSource.carouselDatasourceTitle(forSection: section)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,6 +33,10 @@ extension GMStackViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: GMCarouselTableViewCell.self)) as! GMCarouselTableViewCell
+        
+        let cellModel = GMCarouselTableViewCellModel(withTitle: self.carouselDataSource.carouselDatasourceTitle(forSection: indexPath.section))
+        cell.carouselCellSetModel(model: cellModel)
+        
         return cell
     }
     
