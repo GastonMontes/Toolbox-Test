@@ -10,6 +10,10 @@ import Foundation
 import UIKit
 
 extension UIColor {
+    static func carouselBackgroundColor() -> UIColor {
+        return UIColor.black
+    }
+    
     static func carouselTitleTextColor() -> UIColor {
         return UIColor(red: 0.9255, green: 0.2980, blue: 0.1647, alpha: 1.0)
     }

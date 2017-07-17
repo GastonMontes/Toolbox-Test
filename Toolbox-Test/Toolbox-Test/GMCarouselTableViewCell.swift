@@ -21,7 +21,7 @@ class GMCarouselTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.backgroundColor = UIColor.black
+        self.backgroundColor = UIColor.carouselBackgroundColor()
         
         self.carouselCellSetupTitle()
         self.carouselCellSetupCollectionView()
@@ -34,7 +34,7 @@ class GMCarouselTableViewCell: UITableViewCell {
     }
     
     private func carouselCellSetupCollectionView() -> Void {
-        self.carouselCellCollectionView?.backgroundColor = UIColor.gray
+        self.carouselCellCollectionView?.backgroundColor = UIColor.carouselBackgroundColor()
     }
     
     class func carouselCellHeightSmall() -> CGFloat {
