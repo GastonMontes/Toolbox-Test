@@ -9,9 +9,10 @@
 import Foundation
 import UIKit
 
+let kCollectionViewInsetHorizontal = CGFloat(16)
 let kCollectionViewWidthLarge = CGFloat(640/2)
 let kCollectionViewWidthSmall = CGFloat(320/2)
 let kCollectionViewHeight = CGFloat(480/2)
-let kCollectionViewTopPadding = CGFloat(56)
+let kCollectionViewPaddingTop = CGFloat(56)
 
 let kStatusBarHeight = CGFloat(20)

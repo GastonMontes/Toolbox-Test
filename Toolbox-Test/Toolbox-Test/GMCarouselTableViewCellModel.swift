@@ -21,6 +21,6 @@ class GMCarouselTableViewCellModel {
         self.cellModelTitle = title
         self.cellModelItems = items
         self.cellModelIdentifier = String(describing: GMCarouselTableViewCell.self)
-        self.cellModelHeigth = kCollectionViewHeight + kCollectionViewTopPadding
+        self.cellModelHeigth = kCollectionViewHeight + kCollectionViewPaddingTop
     }
 }

@@ -9,8 +9,6 @@
 import Foundation
 import UIKit
 
-private let kCollectionViewHorizontalInset = CGFloat(16)
-
 extension GMCarouselTableViewCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     // MARK: - Collection view configuration.
@@ -44,10 +42,10 @@ extension GMCarouselTableViewCell: UICollectionViewDataSource, UICollectionViewD
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: kCollectionViewHorizontalInset, bottom: 0, right: kCollectionViewHorizontalInset)
+        return UIEdgeInsets(top: 0, left: kCollectionViewInsetHorizontal, bottom: 0, right: kCollectionViewInsetHorizontal)
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return kCollectionViewHorizontalInset
+        return kCollectionViewInsetHorizontal
     }
 }
