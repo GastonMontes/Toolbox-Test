@@ -19,10 +19,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="264"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="whM-4U-ZlR">
-                        <rect key="frame" x="0.0" y="48" width="320" height="216"/>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="whM-4U-ZlR">
+                        <rect key="frame" x="0.0" y="56" width="320" height="208"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZGR-M5-GPf">
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="8" minimumInteritemSpacing="8" id="ZGR-M5-GPf">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -34,7 +34,7 @@
                         </connections>
                     </collectionView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmS-5h-yUM">
-                        <rect key="frame" x="8" y="8" width="304" height="24"/>
+                        <rect key="frame" x="8" y="16" width="304" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -44,9 +44,9 @@
                     <constraint firstItem="DmS-5h-yUM" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="2nL-xb-Toa"/>
                     <constraint firstItem="whM-4U-ZlR" firstAttribute="top" secondItem="DmS-5h-yUM" secondAttribute="bottom" constant="16" id="C1i-TU-Kfd"/>
                     <constraint firstAttribute="bottom" secondItem="whM-4U-ZlR" secondAttribute="bottom" id="Fy3-4y-G6h"/>
-                    <constraint firstItem="DmS-5h-yUM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Hdi-tO-gak"/>
                     <constraint firstItem="DmS-5h-yUM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="UUF-50-f1s"/>
                     <constraint firstItem="whM-4U-ZlR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="i3X-RR-mnG"/>
+                    <constraint firstItem="DmS-5h-yUM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="jdX-WX-PGt"/>
                     <constraint firstAttribute="trailing" secondItem="whM-4U-ZlR" secondAttribute="trailing" id="zSW-oB-DBB"/>
                 </constraints>
             </tableViewCellContentView>

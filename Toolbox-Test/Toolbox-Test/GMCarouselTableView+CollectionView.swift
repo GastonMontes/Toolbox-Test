@@ -9,7 +9,10 @@
 import Foundation
 import UIKit
 
-extension GMCarouselTableViewCell: UICollectionViewDataSource {
+private let kCollectionViewItemCellWidth = CGFloat(480)
+private let kCollectionViewHorizontalInset = CGFloat(16)
+
+extension GMCarouselTableViewCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     // MARK: - Collection view configuration.
     func carouselCellSetupCollectionView() -> Void {
@@ -27,5 +30,18 @@ extension GMCarouselTableViewCell: UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let itemCell = collectionView.dequeueReusableCell(withReuseIdentifier: "GMCarouselCollectionViewCell", for: indexPath)
         return itemCell
+    }
+    
+    // MARK: - UICollectionViewDelegateFlowLayout implementation.
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: kCollectionViewItemCellWidth, height: (self.carouselCellCollectionView?.frame.size.height)!)
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: kCollectionViewHorizontalInset, bottom: 0, right: kCollectionViewHorizontalInset)
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return kCollectionViewHorizontalInset
     }
 }
