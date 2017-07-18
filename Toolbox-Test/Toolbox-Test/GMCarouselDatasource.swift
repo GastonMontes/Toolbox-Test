@@ -56,7 +56,7 @@ class GMCarouselDatasource {
         return self.carouselDatasourceModels[section].carouselModelTitle
     }
     
-    func carouselDatasrouceType(forSection section: Int) -> GMCarouselModelType! {
+    func carouselDatasourceType(forSection section: Int) -> GMCarouselModelType! {
         return self.carouselDatasourceModels[section].carouselModelType
     }
     

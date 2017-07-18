@@ -46,7 +46,7 @@ extension GMStackViewController: UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - UITableViewDelegate implementation.
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let carouselType = self.carouselDataSource.carouselDatasrouceType(forSection: indexPath.section)
+        let carouselType = self.carouselDataSource.carouselDatasourceType(forSection: indexPath.section)
         
         if carouselType == GMCarouselModelType.typePoster {
             return GMCarouselTableViewCell.carouselCellHeightSmall()
