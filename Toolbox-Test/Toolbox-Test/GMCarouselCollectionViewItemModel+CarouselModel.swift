@@ -9,7 +9,17 @@
 import Foundation
 
 extension GMCarouselCollectionViewItemModel {
-    static func itemModel(fromCarouselItemModel itemModel: GMCarouselModelItem) -> GMCarouselCollectionViewItemModel! {
-        return GMCarouselCollectionViewItemModel(withTitle: itemModel.modelItemTitle, imageURLString: itemModel.modelItemImageURL)
+    static func itemModel(fromCarouselItemModel itemModel: GMCarouselModelItem, carouselType: GMCarouselModelType!) -> GMCarouselCollectionViewItemModel! {
+        
+        
+        return GMCarouselCollectionViewItemModel(withTitle: itemModel.modelItemTitle, imageURLString: itemModel.modelItemImageURL, collectionType: GMCarouselCollectionViewItemModel.itemModelType(forCarouselType: carouselType))
+    }
+    
+    static private func itemModelType(forCarouselType type: GMCarouselModelType!) -> GMCarouselCollectionViewCellType! {
+        if type == GMCarouselModelType.typePoster {
+            return GMCarouselCollectionViewCellType.typeSmall
+        }
+        
+        return GMCarouselCollectionViewCellType.typeLarge
     }
 }

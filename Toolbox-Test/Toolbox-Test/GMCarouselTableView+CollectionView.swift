@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-private let kCollectionViewItemCellWidth = CGFloat(480)
 private let kCollectionViewHorizontalInset = CGFloat(16)
 
 extension GMCarouselTableViewCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -39,7 +38,9 @@ extension GMCarouselTableViewCell: UICollectionViewDataSource, UICollectionViewD
     
     // MARK: - UICollectionViewDelegateFlowLayout implementation.
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: kCollectionViewItemCellWidth, height: (self.carouselCellCollectionView?.frame.size.height)!)
+        let itemCellModel = self.carouselCollectionViewItems[indexPath.row]
+        
+        return CGSize(width: itemCellModel.itemModelCellWidth, height: (self.carouselCellCollectionView?.frame.size.height)!)
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
