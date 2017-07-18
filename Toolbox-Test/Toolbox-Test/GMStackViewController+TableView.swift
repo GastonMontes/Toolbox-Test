@@ -9,14 +9,12 @@
 import Foundation
 import UIKit
 
-private let kStatusBarHeight = CGFloat(20)
-
 extension GMStackViewController: UITableViewDataSource, UITableViewDelegate {
 
     // MARK: - Table configuration functions.
     func setUpTableView() -> Void {
         self.carouselTableView?.backgroundColor = UIColor.carouselBackgroundColor()
-        self.carouselTableView?.contentInset = UIEdgeInsets(top: kStatusBarHeight, left: 0, bottom: 0, right: 0)
+        self.carouselTableView?.contentInset = UIEdgeInsets(top: kStatusBarHeight, left: 0, bottom: kStatusBarHeight, right: 0)
         
         let cellName =  String(describing: GMCarouselTableViewCell.self)
         self.carouselTableView?.register(UINib(nibName:  cellName, bundle: nil), forCellReuseIdentifier:  cellName)

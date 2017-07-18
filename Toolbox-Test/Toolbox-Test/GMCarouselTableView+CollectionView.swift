@@ -40,7 +40,7 @@ extension GMCarouselTableViewCell: UICollectionViewDataSource, UICollectionViewD
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemCellModel = self.carouselCollectionViewItems[indexPath.row]
         
-        return CGSize(width: itemCellModel.itemModelCellWidth, height: (self.carouselCellCollectionView?.frame.size.height)!)
+        return CGSize(width: itemCellModel.itemModelCellWidth, height: kCollectionViewHeight)
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
