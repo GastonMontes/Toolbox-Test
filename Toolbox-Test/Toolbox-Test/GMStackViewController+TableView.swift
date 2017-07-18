@@ -33,10 +33,7 @@ extension GMStackViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellModelTitle = self.carouselDataSource.carouselDatasourceTitle(forSection: indexPath.section)
-        let carouselItems = self.carouselDataSource.carouselDatasourceItems(forSection: indexPath.section)
-        let carouselType = self.carouselDataSource.carouselDatasourceType(forSection: indexPath.section)
-        let cellModel = GMCarouselTableViewCellModel.cellModel(withTitle: cellModelTitle, items: carouselItems, carouselType: carouselType)!
+        let cellModel = self.cellModel(forSection: indexPath.section)!
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellModel.cellModelIdentifier) as! GMCarouselTableViewCell
         
@@ -47,11 +44,15 @@ extension GMStackViewController: UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - UITableViewDelegate implementation.
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let cellModelTitle = self.carouselDataSource.carouselDatasourceTitle(forSection: indexPath.section)
-        let carouselItems = self.carouselDataSource.carouselDatasourceItems(forSection: indexPath.section)
-        let carouselType = self.carouselDataSource.carouselDatasourceType(forSection: indexPath.section)
-        let cellModel = GMCarouselTableViewCellModel.cellModel(withTitle: cellModelTitle, items: carouselItems, carouselType: carouselType)!
-        
-        return cellModel.cellModelHeigth
+        return self.cellModel(forSection: indexPath.section).cellModelHeigth
+    }
+    
+    // MARK: - Cell model functions.
+    // This function link view models with app model.
+    private func cellModel(forSection section: Int) -> GMCarouselTableViewCellModel! {
+        let cellModelTitle = self.carouselDataSource.carouselDatasourceTitle(forSection:section)
+        let carouselItems = self.carouselDataSource.carouselDatasourceItems(forSection: section)
+        let carouselType = self.carouselDataSource.carouselDatasourceType(forSection: section)
+        return GMCarouselTableViewCellModel.cellModel(withTitle: cellModelTitle, items: carouselItems, carouselType: carouselType)!
     }
 }
