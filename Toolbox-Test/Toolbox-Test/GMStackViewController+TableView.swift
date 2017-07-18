@@ -35,7 +35,8 @@ extension GMStackViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellModelTitle = self.carouselDataSource.carouselDatasourceTitle(forSection: indexPath.section)
         let carouselItems = self.carouselDataSource.carouselDatasourceItems(forSection: indexPath.section)
-        let cellModel = GMCarouselTableViewCellModel.cellModel(withTitle: cellModelTitle, items: carouselItems)!
+        let carouselType = self.carouselDataSource.carouselDatasourceType(forSection: indexPath.section)
+        let cellModel = GMCarouselTableViewCellModel.cellModel(withTitle: cellModelTitle, items: carouselItems, carouselType: carouselType)!
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellModel.cellModelIdentifier) as! GMCarouselTableViewCell
         
@@ -46,12 +47,11 @@ extension GMStackViewController: UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - UITableViewDelegate implementation.
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let cellModelTitle = self.carouselDataSource.carouselDatasourceTitle(forSection: indexPath.section)
+        let carouselItems = self.carouselDataSource.carouselDatasourceItems(forSection: indexPath.section)
         let carouselType = self.carouselDataSource.carouselDatasourceType(forSection: indexPath.section)
+        let cellModel = GMCarouselTableViewCellModel.cellModel(withTitle: cellModelTitle, items: carouselItems, carouselType: carouselType)!
         
-        if carouselType == GMCarouselModelType.typePoster {
-            return GMCarouselTableViewCellModel.carouselCellHeightSmall()
-        }
-        
-        return GMCarouselTableViewCellModel.carouselCellHeightLarge()
+        return cellModel.cellModelHeigth
     }
 }

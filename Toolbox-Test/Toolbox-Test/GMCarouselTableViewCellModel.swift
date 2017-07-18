@@ -12,25 +12,32 @@ import UIKit
 private let kCellHeightLarge = CGFloat(640)
 private let kCellHeightSmall = CGFloat(320)
 
+public enum GMCarouselTableViewCellModelType {
+    case typeLarge
+    case typeSmall
+}
+
 class GMCarouselTableViewCellModel {
     // MARK: - Vars.
     private(set) var cellModelTitle: String!
     private(set) var cellModelItems: Array<GMCarouselCollectionViewItemModel>!
     private(set) var cellModelIdentifier: String!
+    private(set) var cellModelHeigth: CGFloat!
     
     // MARK: - Initialization.
-    init(withTitle title: String!, items: Array<GMCarouselCollectionViewItemModel>!) {
+    init(withTitle title: String!, items: Array<GMCarouselCollectionViewItemModel>!, type: GMCarouselTableViewCellModelType) {
         self.cellModelTitle = title
         self.cellModelItems = items
         self.cellModelIdentifier = String(describing: GMCarouselTableViewCell.self)
+        self.cellModelHeigth = self.cellModelHeigth(forType: type)
     }
     
     // MARK: - Cell height functions.
-    class func carouselCellHeightSmall() -> CGFloat {
-        return kCellHeightSmall
-    }
-    
-    class func carouselCellHeightLarge() -> CGFloat {
+    private func cellModelHeigth(forType type: GMCarouselTableViewCellModelType) -> CGFloat {
+        if type == GMCarouselTableViewCellModelType.typeSmall {
+            return kCellHeightSmall
+        }
+        
         return kCellHeightLarge
     }
 }

@@ -9,7 +9,9 @@
 import Foundation
 
 extension GMCarouselTableViewCellModel {
-    static func cellModel(withTitle title: String!, items: Array<GMCarouselModelItem>!) -> GMCarouselTableViewCellModel! {
+    static func cellModel(withTitle title: String!, items: Array<GMCarouselModelItem>!, carouselType: GMCarouselModelType!) -> GMCarouselTableViewCellModel! {
+        let cellModelType = GMCarouselTableViewCellModel.cellModelType(withCarouselType: carouselType)
+        
         var cellModelItems = Array<GMCarouselCollectionViewItemModel>()
         
         for carouselModelItem in items {
@@ -17,6 +19,14 @@ extension GMCarouselTableViewCellModel {
             cellModelItems.append(collectionModelItem!)
         }
         
-        return GMCarouselTableViewCellModel(withTitle: title, items: cellModelItems)
+        return GMCarouselTableViewCellModel(withTitle: title, items: cellModelItems, type: cellModelType)
+    }
+    
+    static private func cellModelType(withCarouselType type: GMCarouselModelType!) -> GMCarouselTableViewCellModelType {
+        if type == GMCarouselModelType.typePoster {
+            return GMCarouselTableViewCellModelType.typeSmall
+        }
+        
+        return GMCarouselTableViewCellModelType.typeLarge
     }
 }
