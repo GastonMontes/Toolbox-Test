@@ -219,8 +219,6 @@
 		38BA60571F19308000854AA1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				38F109821F1D9128006B6DFE /* CollectionView */,
-				38F1097F1F1D90A3006B6DFE /* TableViewCell */,
 				3850BD7C1F195A8F00EDA6CB /* Carousel */,
 				38CB96BE1F1931C600DF2AEA /* Datasource */,
 			);
@@ -258,20 +256,6 @@
 			isa = PBXGroup;
 			children = (
 				38F1097A1F1D8C3B006B6DFE /* GMCarouselCollectionViewItemModel.swift */,
-			);
-			name = CollectionView;
-			sourceTree = "<group>";
-		};
-		38F1097F1F1D90A3006B6DFE /* TableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = TableViewCell;
-			sourceTree = "<group>";
-		};
-		38F109821F1D9128006B6DFE /* CollectionView */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			name = CollectionView;
 			sourceTree = "<group>";

@@ -7,6 +7,10 @@
 //
 
 import Foundation
+import UIKit
+
+private let kCarouselCellHeightLarge = CGFloat(640)
+private let kCarouselCellHeightSmall = CGFloat(320)
 
 class GMCarouselTableViewCellModel {
     // MARK: - Vars.
@@ -17,5 +21,14 @@ class GMCarouselTableViewCellModel {
     init(withTitle title: String!, items: Array<GMCarouselCollectionViewItemModel>!) {
         self.cellModelTitle = title
         self.cellModelItems = items
+    }
+    
+    // MARK: - Cell height functions.
+    class func carouselCellHeightSmall() -> CGFloat {
+        return kCarouselCellHeightSmall
+    }
+    
+    class func carouselCellHeightLarge() -> CGFloat {
+        return kCarouselCellHeightLarge
     }
 }

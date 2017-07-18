@@ -49,9 +49,9 @@ extension GMStackViewController: UITableViewDataSource, UITableViewDelegate {
         let carouselType = self.carouselDataSource.carouselDatasourceType(forSection: indexPath.section)
         
         if carouselType == GMCarouselModelType.typePoster {
-            return GMCarouselTableViewCell.carouselCellHeightSmall()
+            return GMCarouselTableViewCellModel.carouselCellHeightSmall()
         }
         
-        return GMCarouselTableViewCell.carouselCellHeightLarge()
+        return GMCarouselTableViewCellModel.carouselCellHeightLarge()
     }
 }

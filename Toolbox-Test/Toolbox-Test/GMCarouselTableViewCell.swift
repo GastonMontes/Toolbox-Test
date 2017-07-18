@@ -8,9 +8,6 @@
 
 import UIKit
 
-private let kCarouselCellHeightLarge = CGFloat(640)
-private let kCarouselCellHeightSmall = CGFloat(320)
-
 class GMCarouselTableViewCell: UITableViewCell {
     
     // MARK: - IBOutlets.
@@ -35,14 +32,6 @@ class GMCarouselTableViewCell: UITableViewCell {
     
     private func carouselCellSetupCollectionView() -> Void {
         self.carouselCellCollectionView?.backgroundColor = UIColor.carouselBackgroundColor()
-    }
-    
-    class func carouselCellHeightSmall() -> CGFloat {
-        return kCarouselCellHeightSmall
-    }
-    
-    class func carouselCellHeightLarge() -> CGFloat {
-        return kCarouselCellHeightLarge
     }
     
     // MARK: - Data functions.
