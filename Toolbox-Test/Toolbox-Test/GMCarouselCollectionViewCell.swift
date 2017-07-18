@@ -8,11 +8,20 @@
 
 import UIKit
 
+private let kCollectionViewCellCornerRadius = CGFloat(4)
+
 class GMCarouselCollectionViewCell: UICollectionViewCell {
 
+    // MARK: - IBOulets.
+    @IBOutlet private weak var collectionCellImage: UIImageView?
+    
+    // MARK: - View life cycle.
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
 
+        self.collectionCellImage?.backgroundColor = UIColor.carouselImageThumbColor()
+        self.backgroundColor = UIColor.carouselBackgroundColor()
+        
+        self.layer.cornerRadius = kCollectionViewCellCornerRadius
+    }
 }
