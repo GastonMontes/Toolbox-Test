@@ -24,4 +24,10 @@ class GMCarouselCollectionViewCell: UICollectionViewCell {
         
         self.layer.cornerRadius = kCollectionViewCellCornerRadius
     }
+    
+    // MARK: - Data Functions.
+    func collectionCellSetItemModel(itemModel: GMCarouselCollectionViewItemModel!) -> Void {
+        self.collectionCellImage?.image = nil
+        self.collectionCellImage?.loadImage(fromURLString: itemModel.itemModelImageURL)
+    }
 }

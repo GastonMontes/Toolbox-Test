@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class GMCarouselCollectionViewItemModel {
     // MARK: - Vars.
@@ -16,6 +17,9 @@ class GMCarouselCollectionViewItemModel {
     // MARK: - Initialization.
     init(withTitle title: String!, imageURLString: String!) {
         self.itemModelTitle = title
-        self.itemModelImageURL = imageURLString
+        self.itemModelImageURL = imageURLString + "?t=\(Date.timeIntervalSinceReferenceDate)"
+        
+        // Start download image before showing it.
+        UIImage.downloadImage(fromURLString: self.itemModelImageURL)
     }
 }

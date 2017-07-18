@@ -17,8 +17,22 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="70a-6Z-jOw">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    </imageView>
+                </subviews>
             </view>
             <color key="backgroundColor" red="0.2486292128" green="1" blue="0.1554958619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="70a-6Z-jOw" secondAttribute="bottom" id="4gC-7p-Seu"/>
+                <constraint firstItem="70a-6Z-jOw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="GR5-Et-jbF"/>
+                <constraint firstItem="70a-6Z-jOw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Pwp-7V-Kva"/>
+                <constraint firstAttribute="trailing" secondItem="70a-6Z-jOw" secondAttribute="trailing" id="j3j-89-83T"/>
+            </constraints>
+            <connections>
+                <outlet property="collectionCellImage" destination="70a-6Z-jOw" id="BM6-sd-o2W"/>
+            </connections>
         </collectionViewCell>
     </objects>
 </document>

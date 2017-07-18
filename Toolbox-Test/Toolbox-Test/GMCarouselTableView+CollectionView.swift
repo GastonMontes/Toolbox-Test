@@ -28,7 +28,12 @@ extension GMCarouselTableViewCell: UICollectionViewDataSource, UICollectionViewD
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let itemCell = collectionView.dequeueReusableCell(withReuseIdentifier: "GMCarouselCollectionViewCell", for: indexPath)
+        let itemCellModel = self.carouselCollectionViewItems[indexPath.row]
+        
+        let itemCell = collectionView.dequeueReusableCell(withReuseIdentifier: "GMCarouselCollectionViewCell", for: indexPath) as! GMCarouselCollectionViewCell
+        
+        itemCell.collectionCellSetItemModel(itemModel: itemCellModel)
+        
         return itemCell
     }
     

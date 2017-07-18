@@ -43,6 +43,8 @@
 		38F1098D1F1DA9ED006B6DFE /* GMCarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1098B1F1DA9ED006B6DFE /* GMCarouselCollectionViewCell.swift */; };
 		38F1098E1F1DA9ED006B6DFE /* GMCarouselCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38F1098C1F1DA9ED006B6DFE /* GMCarouselCollectionViewCell.xib */; };
 		38F109901F1DABEF006B6DFE /* GMCarouselTableView+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1098F1F1DABEF006B6DFE /* GMCarouselTableView+CollectionView.swift */; };
+		38F109921F1DB8C3006B6DFE /* UIImageView+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F109911F1DB8C3006B6DFE /* UIImageView+URL.swift */; };
+		38F109941F1DC61E006B6DFE /* UIImage+DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F109931F1DC61E006B6DFE /* UIImage+DownloadManager.swift */; };
 		7272F1580FD2E903F71C075B /* Pods_Toolbox_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C242812D11A01FA2C571916 /* Pods_Toolbox_Test.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +99,8 @@
 		38F1098B1F1DA9ED006B6DFE /* GMCarouselCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMCarouselCollectionViewCell.swift; sourceTree = "<group>"; };
 		38F1098C1F1DA9ED006B6DFE /* GMCarouselCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GMCarouselCollectionViewCell.xib; sourceTree = "<group>"; };
 		38F1098F1F1DABEF006B6DFE /* GMCarouselTableView+CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GMCarouselTableView+CollectionView.swift"; sourceTree = "<group>"; };
+		38F109911F1DB8C3006B6DFE /* UIImageView+URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+URL.swift"; sourceTree = "<group>"; };
+		38F109931F1DC61E006B6DFE /* UIImage+DownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+DownloadManager.swift"; sourceTree = "<group>"; };
 		D9C49D1F77B9F13817EAED60 /* Pods-Toolbox-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toolbox-Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Toolbox-Test/Pods-Toolbox-Test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +148,8 @@
 				38F109731F1D7612006B6DFE /* UIFont+CarouselApp.swift */,
 				38F109801F1D90F3006B6DFE /* GMCarouselTableViewCellModel+CarouselModel.swift */,
 				38F109831F1D9152006B6DFE /* GMCarouselCollectionViewItemModel+CarouselModel.swift */,
+				38F109911F1DB8C3006B6DFE /* UIImageView+URL.swift */,
+				38F109931F1DC61E006B6DFE /* UIImage+DownloadManager.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -493,6 +499,8 @@
 				38F1097B1F1D8C3B006B6DFE /* GMCarouselCollectionViewItemModel.swift in Sources */,
 				38F109901F1DABEF006B6DFE /* GMCarouselTableView+CollectionView.swift in Sources */,
 				38F109711F1D75A2006B6DFE /* UIColor+CarouselApp.swift in Sources */,
+				38F109941F1DC61E006B6DFE /* UIImage+DownloadManager.swift in Sources */,
+				38F109921F1DB8C3006B6DFE /* UIImageView+URL.swift in Sources */,
 				38F109741F1D7612006B6DFE /* UIFont+CarouselApp.swift in Sources */,
 				38F1095D1F1D569C006B6DFE /* GMStackViewController+TableView.swift in Sources */,
 				38F109841F1D9152006B6DFE /* GMCarouselCollectionViewItemModel+CarouselModel.swift in Sources */,

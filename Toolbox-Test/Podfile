@@ -1,5 +1,7 @@
-target 'Toolbox-Test' do
-  use_frameworks!
+platform :ios, '9.0'
+use_frameworks!
 
+target 'Toolbox-Test' do
   pod 'SwiftyJSON'
+  pod 'Nuke'
 end
