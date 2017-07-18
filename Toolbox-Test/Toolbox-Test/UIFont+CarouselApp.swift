@@ -13,4 +13,12 @@ extension UIFont {
     static func carouselTitleFont() -> UIFont {
         return UIFont.boldSystemFont(ofSize: 20)
     }
+    
+    static func carouselCollectionItemTitleSmallFont() -> UIFont {
+        return UIFont.systemFont(ofSize: 10)
+    }
+    
+    static func carouselCollectionItemTitleLargeFont() -> UIFont {
+        return UIFont.systemFont(ofSize: 14)
+    }
 }

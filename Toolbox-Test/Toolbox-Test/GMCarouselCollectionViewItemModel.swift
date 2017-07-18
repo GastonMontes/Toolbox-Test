@@ -17,6 +17,9 @@ public enum GMCarouselCollectionViewCellType {
 class GMCarouselCollectionViewItemModel {
     // MARK: - Vars.
     private(set) var itemModelTitle: String!
+    private(set) var itemModelTitleFont: UIFont!
+    private(set) var itemModelTitleTextColor: UIColor!
+    private(set) var itemModelTitleBackgrounColor: UIColor!
     private(set) var itemModelImageURL: String!
     private(set) var itemModelCellWidth: CGFloat!
     
@@ -24,18 +27,29 @@ class GMCarouselCollectionViewItemModel {
     init(withTitle title: String!, imageURLString: String!, collectionType: GMCarouselCollectionViewCellType!) {
         self.itemModelTitle = title
         self.itemModelImageURL = imageURLString + "?t=\(Date.timeIntervalSinceReferenceDate)"
-        self.itemModelCellWidth = self.collectionViewItemWidth(forType: collectionType)
+        
+        if collectionType == GMCarouselCollectionViewCellType.typeLarge {
+            self.collectionViewConfigureLarge()
+        } else {
+            self.collectionViewConfigureSmall()
+        }
         
         // Start download image before showing it.
         UIImage.downloadImage(fromURLString: self.itemModelImageURL)
     }
     
-    // MARK: - Width functions.
-    private func collectionViewItemWidth(forType type: GMCarouselCollectionViewCellType) -> CGFloat {
-        if type == GMCarouselCollectionViewCellType.typeLarge {
-            return kCollectionViewWidthLarge
-        }
-        
-        return kCollectionViewWidthSmall
+    // MARK: - Styling functions.
+    private func collectionViewConfigureLarge() -> Void {
+        self.itemModelCellWidth = kCollectionViewWidthLarge
+        self.itemModelTitleFont = UIFont.carouselCollectionItemTitleSmallFont()
+        self.itemModelTitleTextColor = UIColor.carouselCollectionItemTitleDarkTextColor()
+        self.itemModelTitleBackgrounColor = UIColor.carouselImageThumbColor()
+    }
+    
+    private func collectionViewConfigureSmall() -> Void {
+        self.itemModelCellWidth = kCollectionViewWidthSmall
+        self.itemModelTitleFont = UIFont.carouselCollectionItemTitleLargeFont()
+        self.itemModelTitleTextColor = UIColor.carouselCollectionItemTitleWhiteTextColor()
+        self.itemModelTitleBackgrounColor = UIColor.clear
     }
 }

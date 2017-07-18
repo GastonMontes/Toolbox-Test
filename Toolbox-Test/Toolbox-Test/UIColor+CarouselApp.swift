@@ -19,6 +19,14 @@ extension UIColor {
     }
     
     static func carouselImageThumbColor() -> UIColor {
-        return UIColor.gray
+        return UIColor.lightGray
+    }
+    
+    static func carouselCollectionItemTitleDarkTextColor() -> UIColor {
+        return UIColor.darkText
+    }
+    
+    static func carouselCollectionItemTitleWhiteTextColor() -> UIColor {
+        return UIColor.white
     }
 }

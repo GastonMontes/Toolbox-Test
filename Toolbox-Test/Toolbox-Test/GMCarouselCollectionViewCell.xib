@@ -12,27 +12,53 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GMCarouselCollectionViewCell" id="gTV-IL-0wX" customClass="GMCarouselCollectionViewCell" customModule="Toolbox_Test" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="70a-6Z-jOw">
-                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="beq-Mp-W0w">
+                        <rect key="frame" x="0.0" y="276" width="300" height="24"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kV5-PW-4aX">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kV5-PW-4aX" firstAttribute="leading" secondItem="beq-Mp-W0w" secondAttribute="leading" id="1RR-2x-hxR"/>
+                            <constraint firstItem="kV5-PW-4aX" firstAttribute="top" secondItem="beq-Mp-W0w" secondAttribute="top" id="4Po-tl-W3h"/>
+                            <constraint firstAttribute="trailing" secondItem="kV5-PW-4aX" secondAttribute="trailing" id="H4m-WO-OcQ"/>
+                            <constraint firstAttribute="height" constant="24" id="MYz-bh-ojS"/>
+                            <constraint firstAttribute="bottom" secondItem="kV5-PW-4aX" secondAttribute="bottom" id="ock-cK-4Sk"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <color key="backgroundColor" red="0.2486292128" green="1" blue="0.1554958619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="70a-6Z-jOw" secondAttribute="bottom" id="4gC-7p-Seu"/>
+                <constraint firstAttribute="bottom" secondItem="beq-Mp-W0w" secondAttribute="bottom" id="8mO-PG-afx"/>
                 <constraint firstItem="70a-6Z-jOw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="GR5-Et-jbF"/>
                 <constraint firstItem="70a-6Z-jOw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Pwp-7V-Kva"/>
+                <constraint firstItem="beq-Mp-W0w" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="RZv-Xb-v8l"/>
+                <constraint firstAttribute="trailing" secondItem="beq-Mp-W0w" secondAttribute="trailing" id="Up8-P7-koo"/>
                 <constraint firstAttribute="trailing" secondItem="70a-6Z-jOw" secondAttribute="trailing" id="j3j-89-83T"/>
             </constraints>
+            <size key="customSize" width="347" height="244"/>
             <connections>
                 <outlet property="collectionCellImage" destination="70a-6Z-jOw" id="BM6-sd-o2W"/>
+                <outlet property="collectionCellTitle" destination="kV5-PW-4aX" id="OpI-nT-aGg"/>
+                <outlet property="collectionCellTitleContainer" destination="beq-Mp-W0w" id="uZc-6g-46Y"/>
             </connections>
+            <point key="canvasLocation" x="-114" y="-43"/>
         </collectionViewCell>
     </objects>
 </document>
