@@ -40,6 +40,9 @@
 		38F1097B1F1D8C3B006B6DFE /* GMCarouselCollectionViewItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1097A1F1D8C3B006B6DFE /* GMCarouselCollectionViewItemModel.swift */; };
 		38F109811F1D90F3006B6DFE /* GMCarouselTableViewCellModel+CarouselModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F109801F1D90F3006B6DFE /* GMCarouselTableViewCellModel+CarouselModel.swift */; };
 		38F109841F1D9152006B6DFE /* GMCarouselCollectionViewItemModel+CarouselModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F109831F1D9152006B6DFE /* GMCarouselCollectionViewItemModel+CarouselModel.swift */; };
+		38F1098D1F1DA9ED006B6DFE /* GMCarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1098B1F1DA9ED006B6DFE /* GMCarouselCollectionViewCell.swift */; };
+		38F1098E1F1DA9ED006B6DFE /* GMCarouselCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38F1098C1F1DA9ED006B6DFE /* GMCarouselCollectionViewCell.xib */; };
+		38F109901F1DABEF006B6DFE /* GMCarouselTableView+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1098F1F1DABEF006B6DFE /* GMCarouselTableView+CollectionView.swift */; };
 		7272F1580FD2E903F71C075B /* Pods_Toolbox_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C242812D11A01FA2C571916 /* Pods_Toolbox_Test.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +94,9 @@
 		38F1097A1F1D8C3B006B6DFE /* GMCarouselCollectionViewItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMCarouselCollectionViewItemModel.swift; sourceTree = "<group>"; };
 		38F109801F1D90F3006B6DFE /* GMCarouselTableViewCellModel+CarouselModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GMCarouselTableViewCellModel+CarouselModel.swift"; sourceTree = "<group>"; };
 		38F109831F1D9152006B6DFE /* GMCarouselCollectionViewItemModel+CarouselModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GMCarouselCollectionViewItemModel+CarouselModel.swift"; sourceTree = "<group>"; };
+		38F1098B1F1DA9ED006B6DFE /* GMCarouselCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMCarouselCollectionViewCell.swift; sourceTree = "<group>"; };
+		38F1098C1F1DA9ED006B6DFE /* GMCarouselCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GMCarouselCollectionViewCell.xib; sourceTree = "<group>"; };
+		38F1098F1F1DABEF006B6DFE /* GMCarouselTableView+CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GMCarouselTableView+CollectionView.swift"; sourceTree = "<group>"; };
 		D9C49D1F77B9F13817EAED60 /* Pods-Toolbox-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toolbox-Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Toolbox-Test/Pods-Toolbox-Test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -248,6 +254,7 @@
 				38F109601F1D5CB0006B6DFE /* GMCarouselTableViewCell.swift */,
 				38F109611F1D5CB0006B6DFE /* GMCarouselTableViewCell.xib */,
 				38F1096D1F1D71EC006B6DFE /* GMCarouselTableViewCellModel.swift */,
+				38F1098F1F1DABEF006B6DFE /* GMCarouselTableView+CollectionView.swift */,
 			);
 			name = TableViewCell;
 			sourceTree = "<group>";
@@ -256,6 +263,8 @@
 			isa = PBXGroup;
 			children = (
 				38F1097A1F1D8C3B006B6DFE /* GMCarouselCollectionViewItemModel.swift */,
+				38F1098B1F1DA9ED006B6DFE /* GMCarouselCollectionViewCell.swift */,
+				38F1098C1F1DA9ED006B6DFE /* GMCarouselCollectionViewCell.xib */,
 			);
 			name = CollectionView;
 			sourceTree = "<group>";
@@ -392,6 +401,7 @@
 			files = (
 				38CB96C61F19351700DF2AEA /* Toolbox-Test-Data.json in Resources */,
 				38BA60281F17B8BD00854AA1 /* LaunchScreen.storyboard in Resources */,
+				38F1098E1F1DA9ED006B6DFE /* GMCarouselCollectionViewCell.xib in Resources */,
 				38BA60251F17B8BD00854AA1 /* Assets.xcassets in Resources */,
 				38BA60231F17B8BD00854AA1 /* Main.storyboard in Resources */,
 				38F109641F1D5CB0006B6DFE /* GMCarouselTableViewCell.xib in Resources */,
@@ -470,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38BA60541F1927E500854AA1 /* GMStackViewController.swift in Sources */,
+				38F1098D1F1DA9ED006B6DFE /* GMCarouselCollectionViewCell.swift in Sources */,
 				38F1095A1F1D0956006B6DFE /* GMCarouselModelItem.swift in Sources */,
 				38F109621F1D5CB0006B6DFE /* GMCarouselTableViewCell.swift in Sources */,
 				38F109811F1D90F3006B6DFE /* GMCarouselTableViewCellModel+CarouselModel.swift in Sources */,
@@ -480,6 +491,7 @@
 				38F1096E1F1D71EC006B6DFE /* GMCarouselTableViewCellModel.swift in Sources */,
 				38F109571F1CE126006B6DFE /* GMCarouselModel.swift in Sources */,
 				38F1097B1F1D8C3B006B6DFE /* GMCarouselCollectionViewItemModel.swift in Sources */,
+				38F109901F1DABEF006B6DFE /* GMCarouselTableView+CollectionView.swift in Sources */,
 				38F109711F1D75A2006B6DFE /* UIColor+CarouselApp.swift in Sources */,
 				38F109741F1D7612006B6DFE /* UIFont+CarouselApp.swift in Sources */,
 				38F1095D1F1D569C006B6DFE /* GMStackViewController+TableView.swift in Sources */,

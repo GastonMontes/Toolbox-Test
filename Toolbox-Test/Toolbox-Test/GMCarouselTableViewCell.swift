@@ -12,7 +12,9 @@ class GMCarouselTableViewCell: UITableViewCell {
     
     // MARK: - IBOutlets.
     @IBOutlet private weak var carouselCellTitle: UILabel?
-    @IBOutlet private weak var carouselCellCollectionView: UICollectionView?
+    @IBOutlet weak var carouselCellCollectionView: UICollectionView?
+    
+    private(set) var carouselCollectionViewItems = Array<GMCarouselCollectionViewItemModel>()
     
     // MARK: - View life cycle functions.
     override func awakeFromNib() {
@@ -30,12 +32,9 @@ class GMCarouselTableViewCell: UITableViewCell {
         self.carouselCellTitle?.font = UIFont.carouselTitleFont()
     }
     
-    private func carouselCellSetupCollectionView() -> Void {
-        self.carouselCellCollectionView?.backgroundColor = UIColor.carouselBackgroundColor()
-    }
-    
     // MARK: - Data functions.
     func carouselCellSetModel(model: GMCarouselTableViewCellModel!) -> Void {
         self.carouselCellTitle?.text = model.cellModelTitle
+        self.carouselCollectionViewItems = model.cellModelItems
     }
 }
