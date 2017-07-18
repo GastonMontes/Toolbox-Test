@@ -37,6 +37,9 @@
 		38F109721F1D75A2006B6DFE /* UIColor+CarouselApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F109701F1D75A2006B6DFE /* UIColor+CarouselApp.swift */; };
 		38F109741F1D7612006B6DFE /* UIFont+CarouselApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F109731F1D7612006B6DFE /* UIFont+CarouselApp.swift */; };
 		38F109751F1D7612006B6DFE /* UIFont+CarouselApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F109731F1D7612006B6DFE /* UIFont+CarouselApp.swift */; };
+		38F1097B1F1D8C3B006B6DFE /* GMCarouselCollectionViewItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1097A1F1D8C3B006B6DFE /* GMCarouselCollectionViewItemModel.swift */; };
+		38F109811F1D90F3006B6DFE /* GMCarouselTableViewCellModel+CarouselModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F109801F1D90F3006B6DFE /* GMCarouselTableViewCellModel+CarouselModel.swift */; };
+		38F109841F1D9152006B6DFE /* GMCarouselCollectionViewItemModel+CarouselModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F109831F1D9152006B6DFE /* GMCarouselCollectionViewItemModel+CarouselModel.swift */; };
 		7272F1580FD2E903F71C075B /* Pods_Toolbox_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C242812D11A01FA2C571916 /* Pods_Toolbox_Test.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +88,9 @@
 		38F1096D1F1D71EC006B6DFE /* GMCarouselTableViewCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMCarouselTableViewCellModel.swift; sourceTree = "<group>"; };
 		38F109701F1D75A2006B6DFE /* UIColor+CarouselApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+CarouselApp.swift"; sourceTree = "<group>"; };
 		38F109731F1D7612006B6DFE /* UIFont+CarouselApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+CarouselApp.swift"; sourceTree = "<group>"; };
+		38F1097A1F1D8C3B006B6DFE /* GMCarouselCollectionViewItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMCarouselCollectionViewItemModel.swift; sourceTree = "<group>"; };
+		38F109801F1D90F3006B6DFE /* GMCarouselTableViewCellModel+CarouselModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GMCarouselTableViewCellModel+CarouselModel.swift"; sourceTree = "<group>"; };
+		38F109831F1D9152006B6DFE /* GMCarouselCollectionViewItemModel+CarouselModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GMCarouselCollectionViewItemModel+CarouselModel.swift"; sourceTree = "<group>"; };
 		D9C49D1F77B9F13817EAED60 /* Pods-Toolbox-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toolbox-Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Toolbox-Test/Pods-Toolbox-Test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +136,8 @@
 				38F109531F1BBD0F006B6DFE /* Data+JSON.swift */,
 				38F109701F1D75A2006B6DFE /* UIColor+CarouselApp.swift */,
 				38F109731F1D7612006B6DFE /* UIFont+CarouselApp.swift */,
+				38F109801F1D90F3006B6DFE /* GMCarouselTableViewCellModel+CarouselModel.swift */,
+				38F109831F1D9152006B6DFE /* GMCarouselCollectionViewItemModel+CarouselModel.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -211,6 +219,8 @@
 		38BA60571F19308000854AA1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				38F109821F1D9128006B6DFE /* CollectionView */,
+				38F1097F1F1D90A3006B6DFE /* TableViewCell */,
 				3850BD7C1F195A8F00EDA6CB /* Carousel */,
 				38CB96BE1F1931C600DF2AEA /* Datasource */,
 			);
@@ -245,6 +255,21 @@
 			sourceTree = "<group>";
 		};
 		38F109681F1D6351006B6DFE /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				38F1097A1F1D8C3B006B6DFE /* GMCarouselCollectionViewItemModel.swift */,
+			);
+			name = CollectionView;
+			sourceTree = "<group>";
+		};
+		38F1097F1F1D90A3006B6DFE /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
+		38F109821F1D9128006B6DFE /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -463,15 +488,18 @@
 				38BA60541F1927E500854AA1 /* GMStackViewController.swift in Sources */,
 				38F1095A1F1D0956006B6DFE /* GMCarouselModelItem.swift in Sources */,
 				38F109621F1D5CB0006B6DFE /* GMCarouselTableViewCell.swift in Sources */,
+				38F109811F1D90F3006B6DFE /* GMCarouselTableViewCellModel+CarouselModel.swift in Sources */,
 				38F109541F1BBD0F006B6DFE /* Data+JSON.swift in Sources */,
 				3850BD7F1F1974D200EDA6CB /* Bundle+File.swift in Sources */,
 				38BA601E1F17B8BD00854AA1 /* AppDelegate.swift in Sources */,
 				38CB96C31F19323F00DF2AEA /* GMCarouselDatasource.swift in Sources */,
 				38F1096E1F1D71EC006B6DFE /* GMCarouselTableViewCellModel.swift in Sources */,
 				38F109571F1CE126006B6DFE /* GMCarouselModel.swift in Sources */,
+				38F1097B1F1D8C3B006B6DFE /* GMCarouselCollectionViewItemModel.swift in Sources */,
 				38F109711F1D75A2006B6DFE /* UIColor+CarouselApp.swift in Sources */,
 				38F109741F1D7612006B6DFE /* UIFont+CarouselApp.swift in Sources */,
 				38F1095D1F1D569C006B6DFE /* GMStackViewController+TableView.swift in Sources */,
+				38F109841F1D9152006B6DFE /* GMCarouselCollectionViewItemModel+CarouselModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

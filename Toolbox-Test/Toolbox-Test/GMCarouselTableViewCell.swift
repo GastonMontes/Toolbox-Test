@@ -47,6 +47,6 @@ class GMCarouselTableViewCell: UITableViewCell {
     
     // MARK: - Data functions.
     func carouselCellSetModel(model: GMCarouselTableViewCellModel!) -> Void {
-        self.carouselCellTitle?.text = model.carouselCellTitle
+        self.carouselCellTitle?.text = model.cellModelTitle
     }
 }

@@ -9,10 +9,13 @@
 import Foundation
 
 class GMCarouselTableViewCellModel {
-    private(set) var carouselCellTitle: String!
+    // MARK: - Vars.
+    private(set) var cellModelTitle: String!
+    private(set) var cellModelItems: Array<GMCarouselCollectionViewItemModel>!
     
     // MARK: - Initialization.
-    init(withTitle title: String!) {
-        carouselCellTitle = title
+    init(withTitle title: String!, items: Array<GMCarouselCollectionViewItemModel>!) {
+        self.cellModelTitle = title
+        self.cellModelItems = items
     }
 }

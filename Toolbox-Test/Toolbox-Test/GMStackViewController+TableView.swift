@@ -15,6 +15,7 @@ extension GMStackViewController: UITableViewDataSource, UITableViewDelegate {
 
     // MARK: - Table configuration functions.
     func setUpTableView() -> Void {
+        self.carouselTableView?.backgroundColor = UIColor.carouselBackgroundColor()
         self.carouselTableView?.contentInset = UIEdgeInsets(top: kStatusBarHeight, left: 0, bottom: 0, right: 0)
         
         let cellName =  String(describing: GMCarouselTableViewCell.self)
@@ -34,7 +35,10 @@ extension GMStackViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: GMCarouselTableViewCell.self)) as! GMCarouselTableViewCell
         
-        let cellModel = GMCarouselTableViewCellModel(withTitle: self.carouselDataSource.carouselDatasourceTitle(forSection: indexPath.section))
+        let cellModelTitle = self.carouselDataSource.carouselDatasourceTitle(forSection: indexPath.section)
+        let carouselItems = self.carouselDataSource.carouselDatasourceItems(forSection: indexPath.section)
+        
+        let cellModel = GMCarouselTableViewCellModel.cellModel(withTitle: cellModelTitle, items: carouselItems)
         cell.carouselCellSetModel(model: cellModel)
         
         return cell
