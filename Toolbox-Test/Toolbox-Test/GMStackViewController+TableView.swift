@@ -33,12 +33,12 @@ extension GMStackViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: GMCarouselTableViewCell.self)) as! GMCarouselTableViewCell
-        
         let cellModelTitle = self.carouselDataSource.carouselDatasourceTitle(forSection: indexPath.section)
         let carouselItems = self.carouselDataSource.carouselDatasourceItems(forSection: indexPath.section)
+        let cellModel = GMCarouselTableViewCellModel.cellModel(withTitle: cellModelTitle, items: carouselItems)!
         
-        let cellModel = GMCarouselTableViewCellModel.cellModel(withTitle: cellModelTitle, items: carouselItems)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellModel.cellModelIdentifier) as! GMCarouselTableViewCell
+        
         cell.carouselCellSetModel(model: cellModel)
         
         return cell

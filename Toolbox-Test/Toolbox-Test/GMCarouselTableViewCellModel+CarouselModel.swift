@@ -14,7 +14,7 @@ extension GMCarouselTableViewCellModel {
         
         for carouselModelItem in items {
             let collectionModelItem = GMCarouselCollectionViewItemModel.itemModel(fromCarouselItemModel: carouselModelItem)
-            cellModelItems.append(collectionModelItem)
+            cellModelItems.append(collectionModelItem!)
         }
         
         return GMCarouselTableViewCellModel(withTitle: title, items: cellModelItems)
