@@ -16,6 +16,7 @@ public enum GMCarouselCollectionViewCellType {
 
 class GMCarouselCollectionViewItemModel {
     // MARK: - Vars.
+    private(set) var itemModelIdentifier: String!
     private(set) var itemModelTitle: String!
     private(set) var itemModelTitleFont: UIFont!
     private(set) var itemModelTitleTextColor: UIColor!
@@ -25,6 +26,8 @@ class GMCarouselCollectionViewItemModel {
     
     // MARK: - Initialization.
     init(withTitle title: String!, imageURLString: String!, collectionType: GMCarouselCollectionViewCellType!) {
+        self.itemModelIdentifier = String(describing: GMCarouselCollectionViewCell.self)
+        
         self.itemModelTitle = title
         self.itemModelImageURL = imageURLString + "?t=\(Date.timeIntervalSinceReferenceDate)"
         
